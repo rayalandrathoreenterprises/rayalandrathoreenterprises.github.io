@@ -4,73 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>R and R Enterprises</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: linear-gradient(to right, #f9f9f9, #eef7fb);
       color: #333;
+      scroll-behavior: smooth;
     }
     header {
-      background: #004466;
+      background: linear-gradient(135deg, #004466, #0088cc);
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
     header p {
-      margin: 5px 0 0;
-      font-size: 1.1rem;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
+
+    /* Navbar */
     nav {
       background: #006699;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffcc00;
     }
+
+    /* Section */
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #004466;
     }
+
+    /* Services */
     .services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
     .service {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 280px;
-      transition: transform 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .service:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
+    .service i {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #0088cc;
+    }
+    .service h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .service p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* About */
+    #about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1rem;
+    }
+    #contact a {
+      color: #0088cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
     footer {
       background: #004466;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -90,14 +148,17 @@
     <h2>Our Services</h2>
     <div class="services">
       <div class="service">
+        <i class="fas fa-building"></i>
         <h3>Light Gauge Steel Building Design</h3>
         <p>Innovative, sustainable, and cost-effective steel structures for modern needs.</p>
       </div>
       <div class="service">
+        <i class="fas fa-couch"></i>
         <h3>Interior Design</h3>
         <p>Creative, functional, and aesthetic interiors tailored to your lifestyle and vision.</p>
       </div>
       <div class="service">
+        <i class="fas fa-handshake"></i>
         <h3>Consulting</h3>
         <p>Expert guidance and customized solutions to ensure the success of your projects.</p>
       </div>
@@ -106,7 +167,11 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>At <strong>R and R Enterprises</strong>, we are committed to delivering excellence in structural design, interiors, and consulting. With a passion for innovation and quality, we transform ideas into reality.</p>
+    <p>
+      At <strong>R and R Enterprises</strong>, we are committed to delivering excellence in structural 
+      design, interiors, and consulting. With a passion for innovation and quality, 
+      we transform ideas into reality and build lasting partnerships with our clients.
+    </p>
   </section>
 
   <section id="contact">
